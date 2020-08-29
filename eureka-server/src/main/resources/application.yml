@@ -1,0 +1,11 @@
+server:
+  port: 8090
+eureka:
+  instance:
+    appname: eureka
+  client:
+    allow-redirects: false
+    fetch-registry: false
+    service-url:
+      defaultZone : http://localhost:8090/eureka
+    register-with-eureka: false
