@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/drugtaking/spring-cloud-netflix.git
+          search-paths: config
+          username: drugtaking
+          password: bjc970302
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka/
+  instance:
+    prefer-ip-address: true
